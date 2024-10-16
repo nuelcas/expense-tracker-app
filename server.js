@@ -93,7 +93,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 // Serve static files from the public directory (where your CSS should be)
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname)));
 
 // Dummy data for users and transactions
 let users = [];
