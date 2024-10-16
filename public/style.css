@@ -1,0 +1,136 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(234, 234, 240);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Make sure the content starts at the top */
+  align-items: center;
+}
+
+/* Section containing the title and intro */
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: #007bff;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.intro h1 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.intro p {
+  background: linear-gradient(135deg, #007bff, #00ffbf);
+  padding: 20px;
+  margin-top: 10px;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  width: 80%;
+  animation: fadeInMove 2s ease-out;
+}
+
+/* Main app container */
+#app {
+  background-color: #fff;
+  padding: 60px;
+  margin-top: 260px; /* Adjust for the fixed intro section */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Input and button styling */
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+h2,
+h3 {
+  padding: 15px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+/* Animation for intro text */
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  body {
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+
+  #app {
+    width: 90%;
+    height: 300px;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+}
